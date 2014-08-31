@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>24.1 Encapsulate components correctly</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+
+<body>
+	<wicket:panel>
+		<wicket:link>
+			<script type="text/javascript" src="js/extra/jquery.js"></script>
+			<script type="text/javascript" src="js/extra/bootstrap-transition.js"></script>
+			<script type="text/javascript" src="js/extra/bootstrap-dropdown.js"></script>
+			<script type="text/javascript" src="js/extra/bootstrap-modal.js"></script>
+			<script type="text/javascript"
+				src="js/jsNotifications/ext/jquery-1.7.2.min.js"></script>
+			<script type="text/javascript"
+				src="js/jsNotifications/ext/jboesch-Gritter/js/jquery.gritter.min.js"></script>
+			<script type="text/javascript"
+				src="js/jsNotifications/jsNotifications.js"></script>
+		</wicket:link>
+		<script>
+			loaded = 0;
+			function about() {
+				if (loaded == 0) {
+					loaded = 1;
+					var objInstanceName = new jsNotifications({
+						autoCloseTime : 5,
+						showAlerts : true,
+						title : 'Informer'
+					});
+					//objInstanceName.show('informer','<img src="images/keep-calm.png"></img>');
+					objInstanceName.show('informer','Somos Judit Male, Rodrigo Sampedro y Raul Suarez! (este about no est 100 % funcional todavia...)');
+					setTimeout(function() {
+						loaded = 0;
+					}, 7000);
+				}
+			}
+		</script>
+
+		<link rel="stylesheet"
+			href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+		<link rel="stylesheet"
+			href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+		<wicket:link>
+			<script type="text/javascript" src="js/extra/jquery.js"></script>
+			<link rel="stylesheet" href="css/bootstrap-responsive.css">
+			<link rel="stylesheet" type="text/css"
+				href="js/jsNotifications/ext/jboesch-Gritter/css/jquery.gritter.css">
+		</wicket:link>
+		<nav>
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="container">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#" wicket:id="indice">Informer
+								Web</a>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li><a href="#" wicket:id="que_es">&iquest;Qu&eacute;
+										es?</a></li>
+								<li><a href="#why" wicket:id="porque">&iquest;Por
+										qu&eacute;? </a></li>
+								<li><a href="
+									javascript:void(0);"
+									onClick="about()">About</a></li>
+								<li><a href="#" wicket:id="reg">Registrarse</a></li>
+							</ul>
+							<div class="navbar-form pull-right" id="my-user-informer">
+								<form wicket:id="login">
+									<input class="span2 form-control" style="height: 30px;"
+										id="username" type="text" placeholder="Usuario"
+										wicket:id="usuario"> &nbsp;&nbsp; <input
+										class="span2 form-control" style="height: 30px;" id="userpass"
+										wicket:id="password" type="password"
+										placeholder="Contrase&ntilde;a"> &nbsp;&nbsp; <input
+										type="submit" value="Conectarse" id="button_login"
+										style="padding: 4px;" class="btn btn-default" />
+								</form>
+							</div>
+						</div>
+						<!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+		</nav>
+	</wicket:panel>
+</body>
+</html>

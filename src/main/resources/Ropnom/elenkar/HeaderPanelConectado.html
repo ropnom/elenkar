@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>24.1 Encapsulate components correctly</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+
+<body>
+	<wicket:panel>
+		<wicket:link>
+			<script type="text/javascript" src="js/extra/jquery.js"></script>
+			<script type="text/javascript" src="js/extra/bootstrap-transition.js"></script>
+			<script type="text/javascript" src="js/extra/bootstrap-dropdown.js"></script>
+			<script type="text/javascript" src="js/extra/bootstrap-modal.js"></script>
+		</wicket:link>
+		<link rel="stylesheet"
+			href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+		<link rel="stylesheet"
+			href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+		<wicket:link>
+			<script type="text/javascript" src="js/extra/jquery.js"></script>
+			<link rel="stylesheet" href="css/bootstrap-responsive.css">
+			<link rel="stylesheet" type="text/css"
+				href="js/jsNotifications/ext/jboesch-Gritter/css/jquery.gritter.css">
+		</wicket:link>
+		<nav>
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand" wicket:id="inicioViewer">Gestor
+							Elenkar</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown">Ranking&nbsp;<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<!-- <li><a href="mejores" wicket:id="mejoresPosts">Mejores
+											publicaciones</a></li>
+									<li><a href="peores" wicket:id="peoresPosts">Peores
+											publicaciones</a></li>
+									<li><a href="mascomentados" wicket:id="comentadosPosts">Publicaciones
+											m&aacute;s comentadas</a></li> -->
+									<li><a>Ejemplo 1</a></li>
+									<li><a>Ejemplo 2</a></li>
+									<!-- <li class="divider"></li> -->
+								</ul></li>
+							<!-- <li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown">Salas&nbsp;<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="conectado" wicket:id="conectado">Conectado</a></li>
+									<li><a href="listasalas" wicket:id="listasalas">Lista
+											Salas</a></li>
+									<li><a href="invitaciones" wicket:id="invitaciones">Invitaciones</a></li>
+									<li><a href="missalas" wicket:id="missalas">Mis Salas</a></li>
+									 <li class="divider"></li>
+								</ul></li> -->
+							<!-- <li><a href="perfil" wicket:id="perfil">Mi Perfil</a></li> -->
+							<div class="pull-left navbar-form" style="height: 25px;">
+								<input type="text" id="buscar_barra"
+									class="search-query span2 form-control" data-toggle='modal'
+									data-keyboard='true'
+									onkeydown='if (event.keyCode == 13) GetBusqueda();'
+									placeholder="Buscar usuario...">
+							</div>
+						</ul>
+						<ul class="nav navbar-nav navbar-right"
+							style="float: right !important;">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"> <span wicket:id="usuario"></span>&nbsp;<b
+									class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#" wicket:id="salir">Salir</a></li>
+								</ul></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+	</wicket:panel>
+</body>
+</html>
